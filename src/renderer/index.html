@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 只允许加载本地资源：file: 是打包后 loadFile 的协议，http/ws 只用于开发模式 -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self' file:; script-src 'self' file: 'unsafe-inline'; style-src 'self' file: 'unsafe-inline'; img-src 'self' data: blob: file:; font-src 'self' data: file:; connect-src 'self' file: ws: http://localhost:*; object-src 'none'"
+    />
+    <title>TXT电子书阅读器</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

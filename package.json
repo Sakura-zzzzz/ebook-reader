@@ -1,0 +1,27 @@
+{
+  "name": "ebook-reader",
+  "version": "1.0.0",
+  "description": "TXT 电子书桌面阅读器 MVP（Electron + Vue3 + electron-vite）",
+  "author": "ebook-reader",
+  "license": "MIT",
+  "private": true,
+  "main": "./out/main/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "electron-vite dev",
+    "preview": "electron-vite preview",
+    "build": "electron-vite build && electron-builder --win",
+    "build:dir": "electron-vite build && electron-builder --win --dir"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.4",
+    "electron": "^33.0.0",
+    "electron-builder": "^25.1.8",
+    "electron-vite": "^2.3.0",
+    "vite": "^5.4.8",
+    "vue": "^3.4.38"
+  }
+}

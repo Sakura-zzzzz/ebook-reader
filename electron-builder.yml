@@ -1,0 +1,23 @@
+appId: com.example.ebookreader
+productName: TXT电子书阅读器
+# 只把构建产物打进安装包，源码与配置文件不入包
+files:
+  - out/**/*
+  - package.json
+asar: true
+directories:
+  output: release
+# 用 ASCII 模板命名产物，避免中文文件名带来的兼容问题
+artifactName: ${name}-${version}-setup.${ext}
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: TXT电子书阅读器

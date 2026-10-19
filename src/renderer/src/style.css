@@ -1,0 +1,77 @@
+/* 全局基础样式：MVP 只有白底黑字一种主题 */
+:root {
+  color-scheme: light; /* 避免系统深色模式把控件反色 */
+  --color-text: #1a1a1a;
+  --color-text-soft: #767676;
+  --color-line: #e6e6e6;
+  --color-bg: #ffffff;
+  --color-bg-soft: #f7f7f7;
+  --reader-font-size: 20px;
+  --reader-line-height: 1.8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei',
+    'PingFang SC', 'Hiragino Sans GB', sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden; /* 阅读器自己管滚动，窗口不出现滚动条 */
+}
+
+/* 通用按钮：白底黑字、细边框，hover 时轻微加深 */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 32px;
+  padding: 0 14px;
+  border: 1px solid var(--color-line);
+  border-radius: 6px;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-size: 13px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.btn:hover:not(:disabled) {
+  background: var(--color-bg-soft);
+  border-color: #d0d0d0;
+}
+
+.btn:disabled {
+  color: #b5b5b5;
+  cursor: not-allowed;
+}
+
+/* 主按钮：黑底白字，用于「导入书籍」这类主要动作 */
+.btn-primary {
+  background: #1a1a1a;
+  border-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #333333;
+  border-color: #333333;
+}
+
+.title-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
